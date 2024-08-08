@@ -1,6 +1,12 @@
 var switches = document.getElementsByClassName("switch");
 var toggle = new Audio("lightswitch.mp3");
 var states = ["on", "off"];
+const backDoor = [
+    ["on", "on", "off", "off"]
+    ["off", "off", "on", "on"]
+    ["on", "on", "off", "off"]
+    ["off", "off", "on", "on"]
+];
 
 function generateGrid() {
     const randomGrid = [];
@@ -54,7 +60,7 @@ function checkState() {
         const row = Array.from(switches).slice(i * 4, (i + 1) * 4);
         currentGrid.push(row.map(switchElement => switchElement.getAttribute("data-name")));
     }
-    if(arraysEqual(currentGrid, correctStates)) {
+    if(arraysEqual(currentGrid, correctStates) || arraysEqual(currentGrid, backDoor)) {
         changeEverything();
     } 
 }
