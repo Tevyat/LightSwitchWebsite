@@ -2,9 +2,9 @@ var switches = document.getElementsByClassName("switch");
 var toggle = new Audio("lightswitch.mp3");
 var states = ["on", "off"];
 const backDoor = [
-    ["on", "on", "off", "off"]
-    ["off", "off", "on", "on"]
-    ["on", "on", "off", "off"]
+    ["on", "on", "off", "off"],
+    ["off", "off", "on", "on"],
+    ["on", "on", "off", "off"],
     ["off", "off", "on", "on"]
 ];
 
