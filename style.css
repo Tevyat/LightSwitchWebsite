@@ -1,11 +1,23 @@
 :root {
     --x: 50%;
     --y: 50%;
-    --size: 450px; /* You can adjust this value to change the size of the gradient */
+    --size: 450px;
 }
 
 body {
     margin: 0;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+    background-color: black;
+    justify-content: center; 
+    align-items: center;
 }
 
 section {
@@ -52,7 +64,22 @@ section {
     background: radial-gradient(circle var(--size) at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.893) 0.5%)
 }
 
-h1 {
-    font-size: 50px;
-    color: white;
+#win {
+    font-size: 5rem;
+    height: 80vh;
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
 }

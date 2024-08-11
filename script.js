@@ -1,12 +1,14 @@
 var switches = document.getElementsByClassName("switch");
 var toggle = new Audio("lightswitch.mp3");
 var states = ["on", "off"];
+
 const backDoor = [
     ["on", "on", "off", "off"],
     ["off", "off", "on", "on"],
     ["on", "on", "off", "off"],
     ["off", "off", "on", "on"]
 ];
+
 
 function generateGrid() {
     const randomGrid = [];
@@ -38,7 +40,14 @@ function changeState() {
 }
 
 function changeEverything() {
-    console.log("YOU WIN");
+    document.getElementById("sec").classList.add("hidden");
+    document.getElementById("light").classList.add("hidden");
+
+    const winner = document.getElementById("win");
+    winner.classList.add("shown");
+
+    document.getElementById("body").classList.add("shown")
+
 }
 
 function arraysEqual(a, b) {
