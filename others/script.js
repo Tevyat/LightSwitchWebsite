@@ -1,5 +1,5 @@
 var switches = document.getElementsByClassName("switch");
-var toggle = new Audio("lightswitch.mp3");
+var toggle = new Audio("others/lightswitch.mp3");
 var states = ["on", "off"];
 
 const backDoor = [
@@ -28,14 +28,14 @@ var correctStates = generateGrid();
 console.log(correctStates);
 
 for (var i = 0; i < switches.length; i++) {
-    switches[i].src = "off.png";
+    switches[i].src = "others/off.png";
     switches[i].addEventListener("click", changeState);
 }
 
 function changeState() {
     toggle.play()
-    if(this.getAttribute("data-name") == "off") { this.src="on.png"; this.setAttribute("data-name", "on"); } 
-    else { this.src="off.png"; this.setAttribute("data-name", "off"); }
+    if(this.getAttribute("data-name") == "off") { this.src="others/on.png"; this.setAttribute("data-name", "on"); } 
+    else { this.src="others/off.png"; this.setAttribute("data-name", "off"); }
     checkState();
 }
 
