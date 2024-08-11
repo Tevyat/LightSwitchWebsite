@@ -1,5 +1,5 @@
 var switches = document.getElementsByClassName("switch");
-var toggle = new Audio("others/lightswitch.mp3");
+var toggle = new Audio("lightswitch.mp3");
 var states = ["on", "off"];
 
 const backDoor = [
